@@ -1,0 +1,38 @@
+From: "Accounts Billing" <billing@secure-payments.example>
+To: "Finance Operations" <finance@company.internal>
+Date: Fri, 04 Sep 2026 14:22:18 +0000
+Subject: Urgent Invoice Payment Required - INV-2026-8891
+Message-ID: <20260904142218.8891@secure-payments.example>
+Return-Path: <bounce-relay@compromised-host.xyz>
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="----=_NextPart_000_188416"
+Received: from mail-relay.secure-payments.example (mail-relay.secure-payments.example [185.220.101.47])
+    by mx.company.internal (MailTrace Ingress Gateway) with ESMTP id MT882190
+    for <finance@company.internal>; Fri, 04 Sep 2026 14:23:42 +0000
+Authentication-Results: mx.company.internal;
+    spf=fail (domain secure-payments.example does not designate 185.220.101.47) smtp.mailfrom=billing@secure-payments.example;
+    dkim=pass (2048-bit key) header.d=secure-payments.example header.s=20230630;
+    dmarc=fail (p=reject dis=quarantine) header.from=secure-payments.example;
+
+This is a multi-part message in MIME format.
+------=_NextPart_000_188416
+Content-Type: text/plain; charset="utf-8"
+
+Please process the attached overdue invoice immediately to avoid service disruption.
+Direct wire portal: http://verify-secure-portal.nl/update
+
+Regards,
+Billing & Accounts Operations Team
+------=_NextPart_000_188416
+Content-Type: application/pdf; name="Invoice_INV-2026-8891.pdf"
+Content-Disposition: attachment; filename="Invoice_INV-2026-8891.pdf"
+Content-Transfer-Encoding: base64
+
+JVBERi0xLjUKJcfsj6IKMSAwIG9iaiA8PC9UeXBlL0NhdGFsb2cvUGFnZXMgMiAwIFIvT3BlbkFj
+dGlvbjw8L1MvSmF2YVNjcmlwdC9KUyhhcHAtPmFsZXJ0KCkiKT4+Pj4gZW5kb2JqCjIgMCBvYmog
+PDwvVHlwZS9QYWdlcy9Db3VudCAxL0tpZHNbMyAwIFJdPj4gZW5kb2JqCjMgMCBvYmogPDwvVHlw
+ZS9QYWdlL1BhcmVudCAyIDAgUi9NZWRpYUJveFswIDAgNjEyIDc5Ml0+PiBlbmRvYmoKeHJlZgow
+IDQKMDAwMDAwMDAwMCA2NTUzNSBmIAowMDAwMDAwMDE4IDAwMDAwIG4gCjAwMDAwMDAxMTIgMDAw
+MDAgbiAKMDAwMDAwMDE2MyAwMDAwIG4gCnRyYWlsZXIKPDwvU2l6ZSA0L1Jvb3QgMSAwIFI+Pgpz
+dGFydHhyZWYKMjI5CiUlRU9GCg==
+------=_NextPart_000_188416--

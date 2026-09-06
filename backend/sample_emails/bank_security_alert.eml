@@ -1,0 +1,24 @@
+From: "Global Banking Alert" <security@secure-notifications.com>
+To: "Corporate User" <user@enterprise.internal>
+Date: Sat, 05 Sep 2026 09:14:02 +0000
+Subject: CRITICAL: Unauthorized Login Attempt Detected on Corporate Account
+Message-ID: <20260905091402.4412@secure-notifications.com>
+Return-Path: <spoofer@bulletproof-dns.net>
+MIME-Version: 1.0
+Content-Type: text/plain; charset="utf-8"
+Received: from mx-outbound.bulletproof-dns.net (mx-outbound.bulletproof-dns.net [194.26.29.112])
+    by mx.enterprise.internal with ESMTP id SEC991823
+    for <user@enterprise.internal>; Sat, 05 Sep 2026 09:15:10 +0000
+
+Dear Customer,
+
+We detected an unrecognized login attempt to your corporate treasury account from an unrecognized IP address (45.133.1.88) in St. Petersburg, Russia.
+
+Your account access will be terminated within 2 hours unless you confirm your identity:
+Verify and unlock your account immediately at:
+https://secure-banking-reauth.info/identity/verify?session=99182348
+
+Do not ignore this notification. Failure to verify will result in administrative freeze.
+
+Fraud Prevention Center
+Reference Code: SEC-8891-992

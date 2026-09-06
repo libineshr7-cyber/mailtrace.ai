@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    font-size: 14px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply bg-bg-primary text-text-primary font-sans;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-bg-primary;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-border rounded-sm;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-text-muted;
+  }
+
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #30363d #0d1117;
+  }
+}
+
+@layer components {
+  .panel {
+    @apply bg-bg-secondary border border-border rounded;
+  }
+
+  .panel-header {
+    @apply px-4 py-3 border-b border-border flex items-center justify-between;
+  }
+
+  .panel-body {
+    @apply p-4;
+  }
+
+  .btn {
+    @apply inline-flex items-center gap-1.5 px-3 py-1.5 text-sm font-medium rounded border transition-colors cursor-pointer select-none;
+  }
+
+  .btn-primary {
+    @apply btn bg-accent-blue border-accent-blue text-white hover:bg-accent-blue-light hover:border-accent-blue-light;
+  }
+
+  .btn-secondary {
+    @apply btn bg-bg-tertiary border-border text-text-primary hover:bg-bg-hover hover:border-text-muted;
+  }
+
+  .btn-ghost {
+    @apply btn bg-transparent border-transparent text-text-secondary hover:bg-bg-tertiary hover:text-text-primary;
+  }
+
+  .btn-danger {
+    @apply btn bg-critical-muted border-critical-border text-critical hover:bg-critical hover:text-white;
+  }
+
+  .input {
+    @apply w-full px-3 py-2 bg-bg-tertiary border border-border rounded text-text-primary text-sm placeholder-text-muted
+           focus:outline-none focus:border-accent-blue focus:ring-1 focus:ring-accent-blue transition-colors;
+  }
+
+  .select {
+    @apply input cursor-pointer appearance-none;
+  }
+
+  .badge {
+    @apply inline-flex items-center px-1.5 py-0.5 text-2xs font-semibold uppercase tracking-wider rounded-sm;
+  }
+
+  .badge-critical {
+    @apply badge bg-critical-muted text-critical border border-critical-border;
+  }
+
+  .badge-high {
+    @apply badge bg-orange-950 text-orange-400 border border-orange-900;
+  }
+
+  .badge-medium {
+    @apply badge bg-warning-muted text-warning border border-warning-border;
+  }
+
+  .badge-low {
+    @apply badge bg-success-muted text-success border border-success-border;
+  }
+
+  .badge-info {
+    @apply badge bg-info-muted text-accent-blue border border-accent-blue-muted;
+  }
+
+  .badge-pass {
+    @apply badge bg-success-muted text-success border border-success-border;
+  }
+
+  .badge-fail {
+    @apply badge bg-critical-muted text-critical border border-critical-border;
+  }
+
+  .badge-suspicious {
+    @apply badge bg-warning-muted text-warning border border-warning-border;
+  }
+
+  .badge-neutral {
+    @apply badge bg-bg-tertiary text-text-secondary border border-border;
+  }
+
+  .table-row-hover {
+    @apply hover:bg-bg-hover transition-colors cursor-pointer;
+  }
+
+  .mono {
+    @apply font-mono text-xs;
+  }
+
+  .section-title {
+    @apply text-xs font-semibold uppercase tracking-widest text-text-muted;
+  }
+
+  .dot-critical { @apply w-1.5 h-1.5 rounded-full bg-critical; }
+  .dot-warning  { @apply w-1.5 h-1.5 rounded-full bg-warning; }
+  .dot-success  { @apply w-1.5 h-1.5 rounded-full bg-success; }
+  .dot-info     { @apply w-1.5 h-1.5 rounded-full bg-accent-blue; }
+  .dot-muted    { @apply w-1.5 h-1.5 rounded-full bg-text-muted; }
+
+  .tab {
+    @apply px-3 py-2 text-sm font-medium text-text-secondary border-b-2 border-transparent
+           hover:text-text-primary hover:border-border transition-colors cursor-pointer whitespace-nowrap;
+  }
+
+  .tab-active {
+    @apply text-text-primary border-accent-blue;
+  }
+
+  .leaflet-container {
+    background: #0d1117 !important;
+  }
+
+  .leaflet-tile {
+    filter: brightness(0.6) saturate(0.4) contrast(1.1) !important;
+  }
+
+  .react-flow__background {
+    background-color: #0d1117 !important;
+  }
+}
+
+@layer utilities {
+  .text-balance { text-wrap: balance; }
+}

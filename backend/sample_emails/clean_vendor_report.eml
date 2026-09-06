@@ -1,0 +1,23 @@
+From: "GitHub Notifications" <notifications@github.com>
+To: "Engineering Team" <devs@company.internal>
+Date: Sun, 06 Sep 2026 12:00:00 +0000
+Subject: [GitHub] Security Advisory and Build Summary: All Pipelines Passing
+Message-ID: <github/mailtrace/workflow/run/102938475@github.com>
+Return-Path: <noreply@github.com>
+MIME-Version: 1.0
+Content-Type: text/plain; charset="utf-8"
+Received: from mail.github.com (mail.github.com [140.82.112.4])
+    by mx.company.internal with ESMTP id GH991823
+    for <devs@company.internal>; Sun, 06 Sep 2026 12:00:05 +0000
+Authentication-Results: mx.company.internal;
+    spf=pass (domain of github.com designates 140.82.112.4 as permitted sender) smtp.mailfrom=noreply@github.com;
+    dkim=pass header.d=github.com header.s=pf2014;
+    dmarc=pass (p=reject) header.from=github.com;
+
+Workflow run MailTrace CI/CD completed successfully.
+
+All 48 unit tests and vulnerability scans completed with 0 errors.
+View workflow summary: https://github.com/github/docs
+
+To change your notification settings, visit your account dashboard.
+GitHub, Inc. · 88 Colin P Kelly Jr St · San Francisco, CA 94107
