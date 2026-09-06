@@ -1,0 +1,16 @@
+services:
+  # ====================================================================
+  # Mailtrace AI — Unified Full-Stack Service on Render
+  # Runs both React Frontend and FastAPI Backend in a single free service
+  # ====================================================================
+  - type: web
+    name: mailtrace-ai
+    env: docker
+    region: oregon
+    plan: free
+    dockerfilePath: Dockerfile
+    healthCheckPath: /api/system/health
+    autoDeploy: true
+    envVars:
+      - key: PORT
+        value: 8000

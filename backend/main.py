@@ -47,9 +47,22 @@ init_db()
 SAMPLE_DIR = os.path.join(os.path.dirname(__file__), "sample_emails")
 
 
+FRONTEND_DIST = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "frontend", "dist")
+
+
 @app.get("/")
 def read_root():
+    index_file = os.path.join(FRONTEND_DIST, "index.html")
+    if os.path.isfile(index_file):
+        from starlette.responses import FileResponse
+        return FileResponse(index_file)
     return {"status": "MailTrace AI Real-Time Engine Active", "version": "1.0.0"}
+
+
+@app.get("/api")
+def read_api_root():
+    return {"status": "MailTrace AI Real-Time Engine Active", "version": "1.0.0"}
+
 
 
 @app.get("/api/system/health")
@@ -657,3 +670,29 @@ async def analyze_email_endpoint(
         caseId=case_id,
         logs=logs
     )
+
+
+# ----------------------------------------------------------------------
+# Frontend Static Asset Serving & SPA Routing (Production / Render)
+# ----------------------------------------------------------------------
+frontend_dist = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "frontend", "dist")
+if os.path.exists(frontend_dist):
+    from fastapi.staticfiles import StaticFiles
+    from starlette.responses import FileResponse
+
+    assets_dir = os.path.join(frontend_dist, "assets")
+    if os.path.exists(assets_dir):
+        app.mount("/assets", StaticFiles(directory=assets_dir), name="assets")
+
+    @app.get("/{full_path:path}")
+    async def serve_spa(full_path: str):
+        if full_path.startswith("api"):
+            raise HTTPException(status_code=404, detail="API endpoint not found")
+        file_path = os.path.join(frontend_dist, full_path)
+        if os.path.isfile(file_path):
+            return FileResponse(file_path)
+        index_file = os.path.join(frontend_dist, "index.html")
+        if os.path.isfile(index_file):
+            return FileResponse(index_file)
+        raise HTTPException(status_code=404, detail="Page not found")
+

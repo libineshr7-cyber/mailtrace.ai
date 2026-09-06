@@ -10,7 +10,10 @@ import type {
   AuditLog, SystemHealth, SearchResult,
 } from '../types';
 
-const BASE_URL = '/api';
+const RAW_BASE = (import.meta.env.VITE_API_BASE_URL || '').trim();
+const BASE_URL = RAW_BASE
+  ? (RAW_BASE.endsWith('/') ? `${RAW_BASE.slice(0, -1)}/api` : `${RAW_BASE}/api`)
+  : '/api';
 
 async function apiFetch<T>(path: string, init?: RequestInit): Promise<T> {
   const res = await fetch(`${BASE_URL}${path}`, {
