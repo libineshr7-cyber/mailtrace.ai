@@ -9,7 +9,7 @@ import os
 from datetime import datetime, timezone
 from typing import List, Dict, Any, Optional
 
-DB_PATH = os.path.join(os.path.dirname(__file__), "mailtrace.db")
+DB_PATH = os.getenv("DATABASE_PATH", os.path.join(os.path.dirname(__file__), "mailtrace.db"))
 
 def get_connection():
     conn = sqlite3.connect(DB_PATH)
